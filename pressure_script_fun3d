@@ -1,0 +1,78 @@
+#!/bin/bash 
+#
+#sbatch firefly.run.fun3d 
+#srun --gres=gpu:4 --ntasks=4 --pty bash
+
+#/scr/sree/OpenMPI-4.1.1/Firefly/intel_2020/bin/mpirun -np 4 --mca btl tcp,self /scr/sree/FUN3D/Firefly/intel_2020_CUDA_11.3/OpenMPI-4.1.1/bin/nodet_mpi --soft_init --time_timestep_loop > out.1000
+
+# sed -i "s/restart_read = 'off'/restart_read = 'on'/" fun3d.nml   
+# sed -i "s/total_pressure_ratio(1) = 2.5/total_pressure_ratio(1) = 5/" fun3d.nml   
+# /scr/sree/OpenMPI-4.1.1/Firefly/intel_2020/bin/mpirun -np 4 --mca btl tcp,self /scr/sree/FUN3D/Firefly/intel_2020_CUDA_11.3/OpenMPI-4.1.1/bin/nodet_mpi --time_timestep_loop > out.2000
+
+sed -i "s/total_pressure_ratio(1) = 5/total_pressure_ratio(1) = 7.5/" fun3d.nml   
+/scr/sree/OpenMPI-4.1.1/Firefly/intel_2020/bin/mpirun -np 4 --mca btl tcp,self /scr/sree/FUN3D/Firefly/intel_2020_CUDA_11.3/OpenMPI-4.1.1/bin/nodet_mpi  --time_timestep_loop > out.3000
+
+sed -i "s/total_pressure_ratio(1) = 7.5/total_pressure_ratio(1) = 10.0/" fun3d.nml   
+/scr/sree/OpenMPI-4.1.1/Firefly/intel_2020/bin/mpirun -np 4 --mca btl tcp,self /scr/sree/FUN3D/Firefly/intel_2020_CUDA_11.3/OpenMPI-4.1.1/bin/nodet_mpi  --time_timestep_loop > out.4000
+
+
+sed -i "s/total_pressure_ratio(1) = 10.0/total_pressure_ratio(1) = 12.5/" fun3d.nml   
+/scr/sree/OpenMPI-4.1.1/Firefly/intel_2020/bin/mpirun -np 4 --mca btl tcp,self /scr/sree/FUN3D/Firefly/intel_2020_CUDA_11.3/OpenMPI-4.1.1/bin/nodet_mpi  --time_timestep_loop > out.5000
+
+
+sed -i "s/total_pressure_ratio(1) = 12.5/total_pressure_ratio(1) = 15.0/" fun3d.nml   
+/scr/sree/OpenMPI-4.1.1/Firefly/intel_2020/bin/mpirun -np 4 --mca btl tcp,self /scr/sree/FUN3D/Firefly/intel_2020_CUDA_11.3/OpenMPI-4.1.1/bin/nodet_mpi  --time_timestep_loop > out.6000
+
+
+sed -i "s/total_pressure_ratio(1) = 15.0/total_pressure_ratio(1) = 20.0/" fun3d.nml   
+/scr/sree/OpenMPI-4.1.1/Firefly/intel_2020/bin/mpirun -np 4 --mca btl tcp,self /scr/sree/FUN3D/Firefly/intel_2020_CUDA_11.3/OpenMPI-4.1.1/bin/nodet_mpi  --time_timestep_loop > out.7000
+
+
+sed -i "s/total_pressure_ratio(1) = 20.0/total_pressure_ratio(1) = 25.0/" fun3d.nml   
+/scr/sree/OpenMPI-4.1.1/Firefly/intel_2020/bin/mpirun -np 4 --mca btl tcp,self /scr/sree/FUN3D/Firefly/intel_2020_CUDA_11.3/OpenMPI-4.1.1/bin/nodet_mpi  --time_timestep_loop > out.8000
+
+
+sed -i "s/total_pressure_ratio(1) = 25.0/total_pressure_ratio(1) = 30.0/" fun3d.nml   
+/scr/sree/OpenMPI-4.1.1/Firefly/intel_2020/bin/mpirun -np 4 --mca btl tcp,self /scr/sree/FUN3D/Firefly/intel_2020_CUDA_11.3/OpenMPI-4.1.1/bin/nodet_mpi  --time_timestep_loop > out.9000
+
+
+sed -i "s/total_pressure_ratio(1) = 30.0/total_pressure_ratio(1) = 40.0/" fun3d.nml   
+/scr/sree/OpenMPI-4.1.1/Firefly/intel_2020/bin/mpirun -np 4 --mca btl tcp,self /scr/sree/FUN3D/Firefly/intel_2020_CUDA_11.3/OpenMPI-4.1.1/bin/nodet_mpi  --time_timestep_loop > out.10000
+
+sed -i "s/total_pressure_ratio(1) = 40.0/total_pressure_ratio(1) = 50.0/" fun3d.nml   
+/scr/sree/OpenMPI-4.1.1/Firefly/intel_2020/bin/mpirun -np 4 --mca btl tcp,self /scr/sree/FUN3D/Firefly/intel_2020_CUDA_11.3/OpenMPI-4.1.1/bin/nodet_mpi  --time_timestep_loop > out.11000
+
+
+sed -i "s/total_pressure_ratio(1) = 50.0/total_pressure_ratio(1) = 60.0/" fun3d.nml   
+/scr/sree/OpenMPI-4.1.1/Firefly/intel_2020/bin/mpirun -np 4 --mca btl tcp,self /scr/sree/FUN3D/Firefly/intel_2020_CUDA_11.3/OpenMPI-4.1.1/bin/nodet_mpi  --time_timestep_loop > out.12000
+
+
+sed -i "s/total_pressure_ratio(1) = 60.0/total_pressure_ratio(1) = 70.0/" fun3d.nml   
+/scr/sree/OpenMPI-4.1.1/Firefly/intel_2020/bin/mpirun -np 4 --mca btl tcp,self /scr/sree/FUN3D/Firefly/intel_2020_CUDA_11.3/OpenMPI-4.1.1/bin/nodet_mpi  --time_timestep_loop > out.13000
+
+
+sed -i "s/total_pressure_ratio(1) = 70.0/total_pressure_ratio(1) = 80.0/" fun3d.nml   
+/scr/sree/OpenMPI-4.1.1/Firefly/intel_2020/bin/mpirun -np 4 --mca btl tcp,self /scr/sree/FUN3D/Firefly/intel_2020_CUDA_11.3/OpenMPI-4.1.1/bin/nodet_mpi  --time_timestep_loop > out.14000
+
+
+sed -i "s/total_pressure_ratio(1) = 80.0/total_pressure_ratio(1) = 90.0/" fun3d.nml   
+/scr/sree/OpenMPI-4.1.1/Firefly/intel_2020/bin/mpirun -np 4 --mca btl tcp,self /scr/sree/FUN3D/Firefly/intel_2020_CUDA_11.3/OpenMPI-4.1.1/bin/nodet_mpi  --time_timestep_loop > out.15000
+
+
+sed -i "s/total_pressure_ratio(1) = 90.0/total_pressure_ratio(1) = 100.0/" fun3d.nml   
+/scr/sree/OpenMPI-4.1.1/Firefly/intel_2020/bin/mpirun -np 4 --mca btl tcp,self /scr/sree/FUN3D/Firefly/intel_2020_CUDA_11.3/OpenMPI-4.1.1/bin/nodet_mpi  --time_timestep_loop > out.16000
+
+
+sed -i "s/total_pressure_ratio(1) = 100.0/total_pressure_ratio(1) = 110.0/" fun3d.nml   
+/scr/sree/OpenMPI-4.1.1/Firefly/intel_2020/bin/mpirun -np 4 --mca btl tcp,self /scr/sree/FUN3D/Firefly/intel_2020_CUDA_11.3/OpenMPI-4.1.1/bin/nodet_mpi  --time_timestep_loop > out.17000
+
+sed -i "s/total_pressure_ratio(1) = 110.0/total_pressure_ratio(1) = 120.0/" fun3d.nml   
+/scr/sree/OpenMPI-4.1.1/Firefly/intel_2020/bin/mpirun -np 4 --mca btl tcp,self /scr/sree/FUN3D/Firefly/intel_2020_CUDA_11.3/OpenMPI-4.1.1/bin/nodet_mpi  --time_timestep_loop > out.18000
+
+
+
+
+
+
+
+
